@@ -25,6 +25,14 @@ const User = sequelize.define('Usuarios', {
       this.setDataValue('contrasena', hashedPassword);
     },
   },
+  telefono: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+  last_name: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
   rol_id: {
     type: DataTypes.INTEGER,
     allowNull: true,
