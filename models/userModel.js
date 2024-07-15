@@ -41,6 +41,10 @@ const User = sequelize.define('Usuarios', {
     type: DataTypes.INTEGER,
     allowNull: true,
   },
+  fotoPerfil: {
+    type: DataTypes.STRING, // Tipo de dato para almacenar la URL de la imagen
+    allowNull: true, // Permite que el campo sea nulo inicialmente
+  },
 }, {
   tableName: 'Usuarios',
   timestamps: false,

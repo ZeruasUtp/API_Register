@@ -5,6 +5,7 @@ require('dotenv').config();
 const authRoutes = require('./routes/authRoutes');
 const userRoutes = require('./routes/userRoutes');
 const eventRoutes = require('./routes/eventRoutes');
+const imagenRoutes = require('./routes/imagenRoutes');
 const authMiddleware = require('./middleware/authMiddleware');
 const sequelize = require('./config/db');
 const registerEventRoutes = require('./routes/registerEventRoutes');
@@ -26,6 +27,8 @@ app.use('/api/events', eventRoutes);
 app.use('/api/register', registerEventRoutes);
 
 app.use('/api/notificaciones', notificacionRoutes);
+
+app.use('/api/images', imagenRoutes);
 
 
 app.get('/dashboard', authMiddleware, (req, res) => {
